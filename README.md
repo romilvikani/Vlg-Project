@@ -21,7 +21,7 @@
 
 9. The data is prepared for training in this step. The duck class is assigned a class id of 1 and as there is only class to detect, number of classes is set to 1. Then a for loop is run for each pair of training image and its corresponding data present in gt_box_np, which are in train_images_np and gt_boxes, respectively. The train_image_np array is converted to a tensor and added to train_image_tensors along with addition of a new dimension in the tensor at axis = 0. Hence, np array of shape (width, height, 3) is converted to tensor of shape (1, width, height, 3). 
 
-Similarly, gt_box_np is converted to a tensor and stored in gt_boxes_tensors. 
+   Similarly, gt_box_np is converted to a tensor and stored in gt_boxes_tensors. 
 
-The non-background classes start counting at 1 index. So to start counting at the zeroth index we shift the classes by 1 index using class_id_decrement variable and store it in tensor 
+   The non-background classes start counting at 1 index. So to start counting at the zeroth index we shift the classes by 1 index using class_id_decrement variable and store it    in tensor 
   
