@@ -10,7 +10,8 @@
 3. The TensorFlow model’s repository is cloned.
 4. The object detection api is installed. First the protocol buffers of the api are compiled and then the setup is installed using pip install.
 5. Few more required libraries are imported. Ipython.display libraries, imageio, Image and visualization_utils for visualizing the output images. colab_utils for manually annotating the images.
+
 6. 2 methods are defined here:-                                                                    
-- **convert_image_into_np_array**: an image from a file is loaded into a numpy array hence, it returns a uint8 numpy array with shape (img_height, img_width, 3) and has the file path as its argument. Here, the 3 refers to channels which is 3 in case of RGB./
+- **convert_image_into_np_array**: an image from a file is loaded into a numpy array hence, it returns a uint8 numpy array with shape (img_height, img_width, 3) and has the file path as its argument. Here, the 3 refers to channels which is 3 in case of RGB.
 - **draw_detections**: it uses visualize_boxes_and_labels_on_image_array method present in the viz_utils library to visualize the detections hence, produces images as output when called. Its important arguments are the annotated_image_np array, boxes, classes, and scores.
   
