@@ -23,5 +23,9 @@
 
    Similarly, gt_box_np is converted to a tensor and stored in gt_boxes_tensors. 
 
-   The non-background classes start counting at 1 index. So to start counting at the zeroth index we shift the classes by 1 index using class_id_decrement variable and store it    in tensor 
+   The non-background classes start counting at 1 index. So to start counting at the zeroth index we shift the classes by 1 index using class_id_decrement variable and store it    in tensor 'zero_indexed_groundtruth_classes' which are then converted to one_hot_tensors in the next line.
+   
+10. The SSD ResNet50 checkpoint is downloaded.
+
+11. The pipeline configuration is loaded here and a detection model is built using the model_builder library. Also the num_classes is overridden to be 1 here as it is 90 initially as we are using a COCO architecture which has 90 classes by default.
   
