@@ -14,6 +14,7 @@
 6. 2 methods are defined here:-                                                                    
 - **convert_image_into_np_array**: an image from a file is loaded into a numpy array hence, it returns a uint8 numpy array with shape (img_height, img_width, 3) and has the file path as its argument. Here, the 3 refers to channels which is 3 in case of RGB.
 - **draw_detections**: it uses visualize_boxes_and_labels_on_image_array method present in the viz_utils library to visualize the detections hence, produces images as output when called. Its important arguments are the annotated_image_np array, boxes, classes, and scores.
+7. The file paths of all the training images of the model are stored in a variable named image_path and the convert_image_into_np_array method created in previous step is called for each of the individual image_path.
+8. annotate method of colab_utils library is used to manually annotate the training images by putting boxes around the toy ducks and clicking next image until “All images completed!!” is shown after which submit button shall be clicked. If it is successful, --boxes array populated-- is shown and the gt-boxes named numpy array is filled with data of these images. It is stored in the format (x-coordinate of top left corner of the box, x-coordinate of top left corner of box, width of the box, height of the box)
 
-7. werw
   
